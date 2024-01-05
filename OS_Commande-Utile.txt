@@ -1,0 +1,47 @@
+Labo 2 (Linux)
+mkdir
+passwd
+touch
+date
+ls
+su -
+file /chemin
+head 
+tail
+wc
+
+Labo 3 (Linux)
+vim
+nano
+head
+cat
+ls
+sudo useradd UserName -u 7777 -m -d /home/UserName -s /bin/bash -c "Commentaire"
+sudo passwd UserName
+sudo nano /etc/sudoers (Allow members to execute Sudo command) UserName ALL=(ALL:ALL) ALL
+sudo id > fichierDeDestination
+cat = affiche des infos sur l'utilisateur
+
+Labo 4 = commande fic (Linux)
+mkdir 
+rm
+touch
+mv
+echo
+
+Labo 5 (Windows)
+dir
+cd \
+dir /Q
+dir /a
+dir /S /B /O-N /P
+mkdir
+rmdir
+copy
+copy con
+net user UserName Password /add
+net localgroup GroupeName /add
+net localgroup GrouName UserName /add
+
+
+
