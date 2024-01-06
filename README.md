@@ -37,41 +37,41 @@ Table des matières
 *Ajouter des adresses*
 | Commandes        | Descriptions      
 | ------|-----|
-| netsh interface ip add address « Ethernet » 192.168.1.99 255.255.255.0
-| Pour Ipv6 : netsh interface ipv6 add address « Ethernet » 2a02 :a03f :4299 :… etc..
+| netsh interface ip add address « Ethernet » 192.168.1.99 255.255.255.0 | Cette commande ajoute une adresse IP statique (IPv4) à l'interface réseau nommée "Ethernet". Elle utilise l'adresse IP 192.168.1.99 avec un masque de sous-réseau de 255.255.255.0.
+| Pour Ipv6 : netsh interface ipv6 add address « Ethernet » 2a02 :a03f :4299 :… etc.. | Cette commande ajoute une adresse IPv6 à l'interface réseau nommée "Ethernet". L'adresse IPv6 spécifiée (2a02:a03f:4299:...etc.) doit être une adresse valide dans le format IPv6.
 
 *Supprimer des adresses*
 | Commandes        | Descriptions      
 | ------|-----|
-| netsh interface ip delete address « Ethernet » 192.168.1.99
-| Pour Ipv6 : netsh interface ipv6 delete address « Ethernet » 2a02…Etc…
+| netsh interface ip delete address « Ethernet » 192.168.1.99 | Cette commande supprime l'adresse IP spécifiée (192.168.1.99) de l'interface réseau nommée "Ethernet" en IPv4. Elle est utilisée pour retirer une adresse IPv4 de l'interface.
+| Pour Ipv6 : netsh interface ipv6 delete address « Ethernet » 2a02…Etc… | Cette commande supprime l'adresse IPv6 spécifiée (2a02...Etc.) de l'interface réseau nommée "Ethernet" en IPv6. Elle est utilisée pour retirer une adresse IPv6 de l'interface.
 
 *Configuration dynamique "DHCP"*
 | Commandes        | Descriptions      
 | ------|-----|
-| netsh interface ip set address « Ethernet » dhcp
-| ipconfig /release
-| ipconfig /renew
+| netsh interface ip set address « Ethernet » dhcp | Cette commande configure l'interface réseau nommée "Ethernet" pour utiliser DHCP (Dynamic Host Configuration Protocol) afin d'obtenir une adresse IP automatiquement. Cela signifie que l'adresse IP sera attribuée dynamiquement par un serveur DHCP.
+| ipconfig /release | Cette commande libère la configuration IP actuelle de toutes les interfaces réseau de votre système. Elle informe le serveur DHCP que l'adresse IP n'est plus utilisée.
+| ipconfig /renew | Cette commande renouvelle la configuration IP de toutes les interfaces réseau de votre système. Elle demande au serveur DHCP une nouvelle adresse IP.
 
 *Serveur DNS*
 | Commandes        | Descriptions     
 | ------|-----|
-| netsh interface ip set dns « Ethernet » static 192.168.1.1
-| netsh interface ip add dns « Ethernet » 8.8.8.8
-| netsh interface ip set dns Ethernet dhcp
+| netsh interface ip set dns « Ethernet » static 192.168.1.1 | Cette commande configure l'interface réseau nommée "Ethernet" pour utiliser une adresse DNS statique. Dans cet exemple, l'adresse DNS statique est définie sur 192.168.1.1.
+| netsh interface ip add dns « Ethernet » 8.8.8.8 | Cette commande ajoute une adresse DNS à l'interface réseau nommée "Ethernet". Dans cet exemple, l'adresse DNS ajoutée est 8.8.8.8 (qui est l'un des serveurs DNS publics de Google).
+| netsh interface ip set dns Ethernet dhcp | Cette commande configure l'interface réseau nommée "Ethernet" pour utiliser DHCP (Dynamic Host Configuration Protocol) pour l'attribution automatique des serveurs DNS. Cela signifie que les serveurs DNS seront attribués dynamiquement par un serveur DHCP.
 
 *Activer/désactiver une carte réseau*
 | Commandes        | Descriptions      
 | ------|-----|
-| netsh interface set interface « Ethernet » enable
-| netsh interface set interface « Ethernet » disable
+| netsh interface set interface « Ethernet » enable | Cette commande active l'interface réseau spécifiée "Ethernet". Elle permet à l'interface de commencer à recevoir et envoyer des données.
+| netsh interface set interface « Ethernet » disable | Cette commande désactive l'interface réseau spécifiée "Ethernet". Elle empêche l'interface de recevoir ou d'envoyer des données, la mettant ainsi hors service.
 
 *Vérifier/supprimer/configurer le default gateway en IPv4*
 | Commandes        | Descriptions      
 | ------|-----|
-| route print
-| route add [-p] 0.0.0.0 192.168.1.1
-| route delete 0.0.0.0
+| route print | Cette commande affiche la table de routage du système, montrant les itinéraires possibles pour atteindre d'autres réseaux.
+| route add [-p] 0.0.0.0 192.168.1.1 | Cette commande ajoute une route par défaut vers l'adresse IP spécifiée (192.168.1.1) dans la table de routage. Cela signifie que tout le trafic destiné à des destinations inconnues sera dirigé vers cette passerelle.
+| route delete 0.0.0.0 | Cette commande supprime la route par défaut de la table de routage. Cela pourrait être utilisé lorsque vous ne souhaitez plus diriger tout le trafic vers une passerelle spécifique.
 
 <div id='LigneCommandeLinux'/>
 
