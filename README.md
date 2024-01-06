@@ -80,31 +80,31 @@ Table des matières
 *Commandes de base*
 | Commande        | Description      
 | ------|-----|
-| mkdir
-| rm
-| touch
-| mv
-| echo
-| passwd
-| date
-| ls
-| su -
-| file /chemin
-| head
-| tail
-| wc
-| vim
-| nano
-| cat
-| sudo useradd UserName -u 7777 -m -d /home/UserName -s /bin/bash -c "Commentaire"
-| sudo passwd UserName
-| sudo nano /etc/sudoers (Allow members to execute Sudo command) UserName ALL=(ALL:ALL) ALL
-| sudo id > fichierDeDestination
+| mkdir | Crée un nouveau répertoire (dossier)
+| rm | Supprime des fichiers ou des répertoires. Faites attention, car cette commande est irréversible.
+| touch | Crée un fichier vide ou actualise la date de modification d'un fichier existant.
+| mv | Déplace ou renomme des fichiers et des répertoires.
+| echo | Affiche du texte à la sortie standard (généralement le terminal) ou redirige le texte vers un fichier.
+| passwd | Permet à un utilisateur de changer son mot de passe.
+| date | Affiche la date et l'heure actuelles.
+| ls | Liste les fichiers et répertoires dans le répertoire courant.
+| su - | Permet de passer à l'utilisateur root (superutilisateur) avec son environnement.
+| file /chemin | Détermine le type de fichier pour le chemin spécifié.
+| head | Affiche les premières lignes d'un fichier.
+| tail | Affiche les dernières lignes d'un fichier.
+| wc | Affiche le nombre de lignes, de mots et de caractères d'un fichier.
+| vim | Ouvre l'éditeur de texte Vim.
+| nano | Ouvre l'éditeur de texte Nano.
+| cat | Concatène et affiche le contenu des fichiers.
+| sudo useradd UserName -u 7777 -m -d /home/UserName -s /bin/bash -c "Commentaire" | Ajoute un nouvel utilisateur avec des options spécifiées telles que l'UID, le répertoire personnel, le shell, etc.
+| sudo passwd UserName | Permet de définir un mot de passe pour l'utilisateur spécifié.
+| sudo nano /etc/sudoers (Allow members to execute Sudo command) UserName ALL=(ALL:ALL) ALL | Modifie le fichier sudoers pour accorder des droits sudo à un utilisateur spécifié. 
+| sudo id > fichierDeDestination | Exécute la commande 'id' en tant qu'utilisateur root et redirige la sortie vers un fichier.
 
 *Configurer le clavier :*
 | Commande        | Description      
 | ------|-----|
-| setxkbmap be
+| setxkbmap be | Cette commande définira la disposition du clavier sur "be", indiquant la disposition belge.
 
 *Commmandes réseau*
 | Commande        | Description      
