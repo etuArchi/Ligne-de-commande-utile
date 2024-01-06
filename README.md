@@ -127,3 +127,36 @@ Table des matières
 | Commande        | Description      
 | ------|-----|
 | systemctl restart networking
+
+>*La commande ifdown enp0s3 déconfigure votre interface enp0s3.<br>
+La commande ifup enp0s3 configure votre interface enp0s3.<br>
+La commande ifquery enp0s3 vous renvois la liste des paramètres liés à l’interface enp0s3 dans le fichier interfaces.*
+
+*Supprimer la config d’une interface*
+| Commande        | Description      
+| ------|-----|
+| ip addr flush dev enp0s3
+| ip -6 addr flush dev enp0s3
+
+*Démarrer un process client DHCP*
+| Commande        | Description      
+| ------|-----|
+| dhclient -v enp0s3
+
+*Terminer tous les process de type dhclient*
+| Commande        | Description      
+| ------|-----|
+| pkill dhclient
+
+*Le changement du hostname « à chaud » et de manière temporaire peut se faire avec la 
+commande*
+| Commande        | Description      
+| ------|-----|
+| hostname MonNouvelHostname
+
+*Installez les utilitaires DNS avec la commande*
+| Commande        | Description      
+| ------|-----|
+| apt-get install dnsutils
+| nslookup www.google.be (vérifiez que la résolution de nom fonctionne avec la 
+commande nslookup)
