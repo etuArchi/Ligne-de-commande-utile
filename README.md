@@ -158,5 +158,4 @@ commande*
 | Commande        | Description      
 | ------|-----|
 | apt-get install dnsutils
-| nslookup www.google.be (vérifiez que la résolution de nom fonctionne avec la 
-commande nslookup)
+| nslookup www.google.be (vérifiez que la résolution de nom fonctionne avec la commande nslookup)
