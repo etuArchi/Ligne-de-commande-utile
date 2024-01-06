@@ -28,11 +28,11 @@ Table des matières
 | mkdir | Crée un nouveau répertoire
 | rmdir | Supprime un répertoire vide.
 | copy | Copie un fichier d'un emplacement à un autre.
-| copy con | 
-| net user UserName Password /add
-| net localgroup GroupeName /add
-| net localgroup GrouName UserName /add
-| [ ] | Signifie qu’un paramètre est optionnel |
+| copy con | Permet de créer un nouveau fichier en saisissant du texte dans la console. Vous pouvez appuyer sur Ctrl+Z pour terminer.
+| net user UserName Password /add | Ajoute un nouvel utilisateur avec le nom d'utilisateur spécifié et le mot de passe.
+| net localgroup GroupeName /add | Crée un nouveau groupe local.
+| net localgroup GrouName UserName /add | Ajoute un utilisateur existant à un groupe local.
+| [ ] | Signifie qu’un paramètre est optionnel | Indique que le paramètre entre crochets est facultatif et peut être inclus ou omis selon les besoins.
 
 *Ajouter des adresses*
 | Commandes        | Descriptions      
