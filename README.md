@@ -109,24 +109,24 @@ Table des matières
 *Commmandes réseau*
 | Commande        | Description      
 | ------|-----|
-| ip addr show (ip -6 addr show)
-| ip link show
-| ip route show
+| ip addr show (ip -6 addr show) | Cette commande affiche les informations sur les interfaces réseau et leurs adresses IP associées. L'option '-6' permet de filtrer spécifiquement les adresses IPv6.
+| ip link show | Cette commande affiche des informations sur toutes les interfaces réseau disponibles, telles que leur état (activé ou désactivé), leur adresse MAC, et d'autres détails.
+| ip route show | Cette commande affiche la table de routage du système, montrant les itinéraires possibles pour atteindre différentes destinations réseau.
 
 *Cat affiche le contenue du fichier voici un exemple*
 | Commande        | Description      
 | ------|-----|
-| cat /etc/resolv.conf
+| cat /etc/resolv.conf | Cette commande affiche le contenu du fichier /etc/resolv.conf. Ce fichier est utilisé pour configurer les paramètres de résolution DNS sur le système. En particulier, il indique les adresses des serveurs DNS utilisés par le système pour résoudre les noms de domaine en adresses IP.
 
 *Copie d’un fichier grâce à la commande cp*
 | Commande        | Description      
 | ------|-----|
-| cp /etc/network/interfaces /etc/network/interfaces.sav
+| cp /etc/network/interfaces /etc/network/interfaces.sav | Cette commande copie le contenu du fichier /etc/network/interfaces vers un nouveau fichier nommé /etc/network/interfaces.sav. Cela crée une sauvegarde du fichier d'interfaces réseau actuel.
 
 *Redémarrage complet du service réseau*
 | Commande        | Description      
 | ------|-----|
-| systemctl restart networking
+| systemctl restart networking | Cette commande redémarre le service responsable de la gestion des interfaces réseau et de la configuration du réseau.
 
 >*La commande ifdown enp0s3 déconfigure votre interface enp0s3.<br>
 La commande ifup enp0s3 configure votre interface enp0s3.<br>
@@ -135,27 +135,27 @@ La commande ifquery enp0s3 vous renvois la liste des paramètres liés à l’in
 *Supprimer la config d’une interface*
 | Commande        | Description      
 | ------|-----|
-| ip addr flush dev enp0s3
-| ip -6 addr flush dev enp0s3
+| ip addr flush dev enp0s3 | Cette commande supprime toutes les adresses IP associées à l'interface réseau spécifiée 'enp0s3'. Elle efface toutes les configurations d'adresses IPv4 liées à cette interface.
+| ip -6 addr flush dev enp0s3 | Cette commande supprime toutes les adresses IPv6 associées à l'interface réseau spécifiée 'enp0s3'. Elle efface toutes les configurations d'adresses IPv6 liées à cette interface.
 
 *Démarrer un process client DHCP*
 | Commande        | Description      
 | ------|-----|
-| dhclient -v enp0s3
+| dhclient -v enp0s3 | Cette commande utilise le client DHCP ('dhclient') pour demander une adresse IP au serveur DHCP sur l'interface réseau spécifiée 'enp0s3'. L'option '-v' (verbose) affiche des informations détaillées pendant le processus de demande d'adresse IP.
 
 *Terminer tous les process de type dhclient*
 | Commande        | Description      
 | ------|-----|
-| pkill dhclient
+| pkill dhclient | Cette commande envoie un signal pour terminer tous les processus 'dhclient' en cours d'exécution sur le système. Elle met fin aux instances du client DHCP qui sont actuellement actives.
 
 *Le changement du hostname « à chaud » et de manière temporaire peut se faire avec la 
 commande*
 | Commande        | Description      
 | ------|-----|
-| hostname MonNouvelHostname
+| hostname MonNouvelHostname | Cette commande change le nom d'hôte du système à "MonNouvelHostname". Le nom d'hôte est un identifiant unique attribué à un périphérique sur un réseau. 
 
 *Installez les utilitaires DNS avec la commande*
 | Commande        | Description      
 | ------|-----|
-| apt-get install dnsutils
-| nslookup www.google.be (vérifiez que la résolution de nom fonctionne avec la commande nslookup)
+| apt-get install dnsutils | Cette commande utilise le gestionnaire de paquets 'apt-get' pour installer le paquet 'dnsutils'. Le paquet 'dnsutils' contient des utilitaires liés aux services DNS, tels que 'nslookup'.
+| nslookup www.google.be (vérifiez que la résolution de nom fonctionne avec la commande nslookup) | Cette commande utilise l'outil 'nslookup' pour interroger les serveurs DNS et obtenir des informations sur la résolution de nom du site web 'www.google.be'. Elle affiche généralement l'adresse IP associée au nom de domaine spécifié.
