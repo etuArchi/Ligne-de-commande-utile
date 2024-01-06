@@ -16,19 +16,19 @@ Table des matières
 *Commandes de base*
 | Commandes        | Descriptions      
 | ------|-----|
-| ipconfig
-| ipconfig /all
-| ipconfig / ?
-| route print
-| dir
-| cd \
-| dir /Q
-| dir /a
-| dir /S /B /O-N /P
-| mkdir
-| rmdir
-| copy
-| copy con
+| ipconfig | Affiche l'adresse IP, le masque de sous-réseau et la passerelle pour toutes les interfaces réseau de votre machine.
+| ipconfig /all | Affiche des informations détaillées sur toutes les interfaces réseau, y compris les adresses physiques (MAC), les serveurs DNS, etc.
+| ipconfig / ? | Affiche l'aide pour la commande ipconfig, montrant comment utiliser différentes options avec celle-ci.
+| route print | Affiche la table de routage, montrant les itinéraires possibles pour atteindre d'autres réseaux.
+| dir | Liste les fichiers et dossiers dans le répertoire courant.
+| cd \ | Change le répertoire de travail vers la racine du lecteur
+| dir /Q | Affiche les propriétaires des fichiers et des répertoires
+| dir /a | Affiche tous les fichiers, y compris les fichiers cachés et les dossiers spéciaux.
+| dir /S /B /O-N /P | Liste tous les fichiers de manière récursive (/S), affiche le résultat sous forme de chemin complet (/B), trie les résultats par ordre alphabétique inversé (/O-N) et affiche une page à la fois (/P).
+| mkdir | Crée un nouveau répertoire
+| rmdir | Supprime un répertoire vide.
+| copy | Copie un fichier d'un emplacement à un autre.
+| copy con | 
 | net user UserName Password /add
 | net localgroup GroupeName /add
 | net localgroup GrouName UserName /add
